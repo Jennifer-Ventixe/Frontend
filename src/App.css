@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --primary-color-100: #F26CF9;
+    --primary-color-90: #F589FA;
+    --primary-color-50: #FCD3FE;
+    --primary-color-40: #FCE2FE;
+    --primary-color-30: #FDEDFE;
+    --secondary-color-110: #1C2346;
+    --secondary-color-100: #37437D;
+    --secondary-color-90: #5562A2;
+    --secondary-color-70: #707DBF;
+    --secondary-color-60: #ABB4DD;
+    --secondary-color-50: #D3DAF9;
+    --yellow-color-100: #FFCA39;
+    --yellow-color-90: #FFEFC3;
+    --grey-color-10: #FFFFFF;
+    --grey-color-20: #F7F7F7;
+    --grey-color-30: #EDEDED;
+    --grey-color-40: #E0E0E1;
+    --grey-color-50: #C3C3C4;
+    --grey-color-60: #9F9FA1;
+    --grey-color-70: #777779;
+    --grey-color-80: #636365;
+    --grey-color-90: #434345;
+    --grey-color-100: #1E1E20;
+    --cool-grey-color-10: #EEEFFF;
+    --cool-grey-color-20: #e4E5F5;
+    --cool-grey-color-30: #DDDEED;
+    --cool-grey-color-40: #D1D2E0;
+    --cool-grey-color-50: #B0B1BD;
+    --cool-grey-color-60: #8F8F99;
+    --cool-grey-color-70: #72737A;
+    --cool-grey-color-80: #56565C;
+    --cool-grey-color-90: #39393D;
+    --cool-grey-color-100: #131314;
+
+    --font-family: 'Inter', sans-serif;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --border-radius: 16px;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    font-weight: var(--font-regular);
+    color: var(--secondary-color-100);
+    font-size: 16px;
+    font-style: normal;
+    background-color: var(--grey-color-10);
+}
+
+.portal-wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "nav header" "nav main" "nav footer";
+    height: 100dvh;
+    
+
+.nav{
+    grid-area: nav;
+    border-right: 1px solid var(--border-color);
+    padding: 1rem;
+    margin: 0.5rem;
+    background-color: var(--cool-grey-color-10);
+    border-radius: var(--border-radius);
+}
+
+.header {
+    grid-area: header;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 2rem;
+    border-radius: var(--border-radius);
+    background-color: var(--grey-color-20);
+}
+
+.main {
+    grid-area: main;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin: 0.5rem;
+     background-color: var(--grey-color-20);
+}
+    
+
+.footer {
+    grid-area: footer;
+    padding: 1rem;
+    margin: 0.5rem;
+    text-align: center;
+    border-radius: var(--border-radius);
+    background-color: var(--grey-color-20);
+}
+
+}
