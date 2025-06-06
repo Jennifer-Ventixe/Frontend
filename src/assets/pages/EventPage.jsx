@@ -11,6 +11,7 @@ const EventPage = () => {
         <Header />
         <main className="main">
            <EventList />
+           <p>hejhej</p>
         </main>
         <Footer /> 
     </div>

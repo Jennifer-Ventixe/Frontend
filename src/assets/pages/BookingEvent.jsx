@@ -86,11 +86,15 @@ const BookingEvent = () => {
             }
 
   return (
-    <div>
-        <h1>Book Event - {event.title}</h1>
-        <div>
-            <form onSubmit={handleSubmit} noValidate>
-                <div>
+     <div className="portal-wrapper">
+        <Nav />
+        <Header />
+        <main className="main">
+            <div>
+                <h1>Book Event - {event.title}</h1>
+                   <div>
+                      <form onSubmit={handleSubmit} noValidate>
+                        <div>
                     <label>First Name</label>
                     <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required/>
                 </div>
@@ -118,7 +122,14 @@ const BookingEvent = () => {
             </form>
         </div>
         
+         </div>
+           
+        </main>
+        <Footer /> 
     </div>
+
+
+
   )
 }
 
