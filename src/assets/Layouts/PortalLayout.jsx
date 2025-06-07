@@ -9,9 +9,9 @@ const PortalLayout = () => {
         <div className="portal-wrapper">
             <Nav />
             <Header />
-        <main>
+        <main className="main">
             <Outlet />
-        </main>
+        </main >
         <Footer />
 
     </div>

@@ -93,8 +93,8 @@ const BookingEvent = () => {
             <div>
                 <h1>Book Event - {event.title}</h1>
                    <div>
-                      <form onSubmit={handleSubmit} noValidate>
-                        <div>
+                  <form onSubmit={handleSubmit} noValidate>
+                <div>
                     <label>First Name</label>
                     <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required/>
                 </div>
