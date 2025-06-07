@@ -1,6 +1,12 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import Nav from '../Components/Nav'
+import Header from '../Components/Header'
+import Footer from '../Components/Footer'
+import Terms from '../Components/Terms'
+import ProhibitedItems from '../Components/ProhibitedItems'
+
 
 const EventDetailsPage = () => {
   const { id } = useParams()
@@ -19,15 +25,36 @@ const EventDetailsPage = () => {
   
       }, [])
 
-
-
   return (
-            <div className="event-details">
-               <h1>{event.title}</h1>
-               <h3>{event.description}</h3>
-               <Link to={`/events/booking/${id}`} className="btn btn-primary">Book Event</Link>
+       <div className="portal-wrapper">
+        <Nav />
+        <Header />
+        <main className="main event-details-page">
+            <div className="event-details-wrapper">
+                <div className="event-details">
+                    <img src="Images/EventPicture.jpg" alt="Konfetti" className="event-image" />
+                    <h1>{event.title}</h1>
+                    <h3>{event.date}</h3>
+                    <h3>{event.location}</h3>
+                    <h3>{event.price} SEK</h3>
+                    <div className="about-event">
+                        <h3>About Event</h3>
+                        <h3>{event.description}</h3>
+                    </div>
+                    <Link to={`/events/booking/${id}`} className="btn btn-primary">Book Event</Link>
+                </div>
             </div>
+            <div className="rules">
+                <Terms />
+                <ProhibitedItems />
+            </div>
+      
+        </main>
+        <Footer /> 
+    </div>
+         
   )
 }
 
 export default EventDetailsPage
+

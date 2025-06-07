@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import Nav from '../Components/Nav'
+import Header from '../Components/Header'
+import Footer from '../Components/Footer'
+
+
 
 const BookingEvent = () => {
     const navigate = useNavigate()
@@ -79,10 +84,7 @@ const BookingEvent = () => {
                     }
                 } catch (err) {
                     console.error("Error during booking:", err)
-                }
-
-
-            
+                }    
             }
 
   return (
@@ -94,35 +96,36 @@ const BookingEvent = () => {
                 <h1>Book Event - {event.title}</h1>
                    <div>
                   <form onSubmit={handleSubmit} noValidate>
-                <div>
+                <div className="event-form">
                     <label>First Name</label>
                     <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required/>
                 </div>
-                   <div>
+                   <div className="event-form">
                     <label>Last Name</label>
                     <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required/>
                 </div>
-                   <div>
+                   <div className="event-form">
                     <label>Email Name</label>
                     <input type="email" name="email" value={formData.email} onChange={handleChange} required/>
                 </div>
-                   <div>
+                   <div className="event-form">
                     <label>Street Name</label>
                     <input type="text" name="streetName" value={formData.streetName} onChange={handleChange} required/>
                 </div>
-                   <div>
+                   <div className="event-form">
                     <label>Postal Code</label>
                     <input type="text" name="postalCode" value={formData.postalCode} onChange={handleChange} required />
                 </div>
-                   <div>
+                   <div className="event-form">
                     <label>City</label>
                     <input type="text" name="city" value={formData.city} onChange={handleChange} required/>
                 </div>
-                <button type="submit" className="btn btn-primary">Book Now</button>
+                <button type="submit" className="btn">Book Now</button>
             </form>
         </div>
         
          </div>
+         
            
         </main>
         <Footer /> 

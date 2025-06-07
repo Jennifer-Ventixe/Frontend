@@ -114,7 +114,73 @@ a {
     }
 }
 
+.btn {
+    background-color: var(--primary-color-100);
+    color: var(--cool-grey-color-20);
+    border: 1px solid var(--btn-border-color);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1em;
+    font-weight: var(--font-semibold);
+    font-family: var(--font-standard);
+    font-style: normal;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
 
+
+    &:hover
+{
+    background-color: var(--grey-color-30);
+    color: var(--primary-color-90);
+    border-color: var(--grey-color-30);
+    text-decoration: none;
+}
+
+}
+
+form {
+    
+    gap: 1rem;
+    margin: 1rem 2rem;
+    background-color: var(--background-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+
+    label {
+        font-weight: var(--font-medium);
+        color: var(--secondary-color-100);
+    }
+
+    input, textarea {
+        padding: 0.5rem;
+        border-radius: var(--border-radius);
+        border: 1px solid var(--input-border-color);
+        background-color: var(--input-background-color);
+        color: var(--input-text-color);
+        font-family: var(--font-family);
+        font-weight: var(--font-regular);
+        margin-bottom: 1rem;
+
+        &::placeholder {
+            color: var(--input-placeholder-color);
+        }
+    }
+
+    input:focus, textarea:focus {
+        border-color: var(--primary-color-100);
+        outline: none;
+    }
+
+    .event-form {
+        display: grid;
+        gap: 1rem;
+    }
+}
 
 .center-wrapper {
     display: flex;
@@ -138,14 +204,14 @@ a {
 
     }
 
-    @media (width >= 1400px) {
+    @media (width >= 1320px) {
         grid-template-columns: 250px 1fr;
         grid-template-areas: "nav header" "nav main" "nav footer";
         grid-template-rows: auto 1fr auto;
     }
 }
 
-.nav{
+.nav {
     grid-area: nav;
     padding: 1.5rem;
     background-color: var(--nav-background-color);
@@ -222,7 +288,9 @@ a {
 
 .cards {
    display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+   width: 350px;
+   grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
 }
 
 .event-card {
@@ -240,11 +308,95 @@ a {
         border-radius: var(--border-radius);
     }
 
-
-
     p, h1 {
         color: var(--secondary-color-100);
     }  
-
 }
 
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    background-color: var(--footer-background-color);
+    color: var(--text-muted-color);
+
+
+    a {
+        color: var(--secondary-color-100);
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: var(--primary-color-100);
+        }
+    }
+
+    .footer-content {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .social-links {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+.event-details-wrapper{
+    padding: 2rem;
+    background-color: var(--grey-color-10);
+    border-radius: var(--border-radius);
+}
+
+
+.rules {
+    display: flex;;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+    .terms {
+        align-items: center;
+        padding: 1rem;
+        gap: 0.5rem;
+        background-color: var(--grey-color-10);
+        color: var(--secondary-color-100);
+        font-weight: var(--font-regular);
+        font-size: 0.9rem;
+        text-decoration: none;
+        border-radius: var(--border-radius);
+    }
+    .prohibited-items-wrapper {
+        flex-direction: column;
+        padding: 1rem;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        border-radius: var(--border-radius);
+    }
+
+
+
+
+.prohibited-items-wrapper {
+    background-color: var(--background-color);
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    .prohibited-items {
+          display: grid;
+          padding: 1rem;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+          grid-template-columns: auto auto auto auto;
+          grid-template-rows: auto auto auto;
+    }
+
+ 
+}   

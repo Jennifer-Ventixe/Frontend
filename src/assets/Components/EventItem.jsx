@@ -8,8 +8,8 @@ const EventItem = ({item}) => {
        <div className="event-card">
            <img src="Images/EventPicture.jpg" alt="Konfetti" className="event-image" />
            <h1 className="event-title">{item.title}</h1>
-            <p className="event-date">{new Date(item.startDate).toLocaleDateString()}</p>
-            <p>{new Date(item.startDate).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>
+            <p className="event-date">{new Date(item.eventDate).toLocaleDateString()}</p>
+            <p>{new Date(item.eventDate).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>
             <div className="event-location">
               <p className="event-location-text" >{item.location}</p>
             </div>
