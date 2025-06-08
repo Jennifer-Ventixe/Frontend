@@ -15,8 +15,6 @@ const Terms = () => {
         <p>All content on this site is the property of the site owner or its licensors. You may not reproduce, distribute, or create derivative works without permission.</p>
         <h2>5. Limitation of Liability</h2>
         <p>We will not be liable for any loss or damage arising from your use of the site or its content.</p>
-        <h2>6. Governing Law</h2>
-        <p>These terms are governed by the laws of [Your Country/State]. Any disputes will be resolved in the courts of [Your Jurisdiction].</p>
     </div>
   )
 }

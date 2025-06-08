@@ -6,6 +6,8 @@ import BookingEvent from './assets/pages/BookEventPage.jsx'
 import Bookings from './assets/pages/BookingsPage.jsx'
 import LoginPage from './assets/pages/LoginPage.jsx'
 import Signuppage from './assets/pages/Signuppage.jsx'
+import GalleryPage from './assets/pages/GalleryPage.jsx'
+
 
 function App() {
 
@@ -20,6 +22,8 @@ function App() {
       <Route path="/events/:id" element={<EventDetailsPage />} />
       <Route path="/events/booking/:id" element={<BookingEvent />} />
       <Route path="/bookings" element={<Bookings />} />
+      <Route path="/gallery" element={<GalleryPage />} />
+    
     
     </Routes>
 
