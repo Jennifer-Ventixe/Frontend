@@ -17,10 +17,9 @@ const LoginPage = () => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
   }
-
-  // ✅ Lägg till login-funktion som anropar ditt backend-API
+  
   const login = async (username, email, password) => {
-    const res = await fetch("https://your-api.azurewebsites.net/api/account/login", {
+    const res = await fetch("https://jennifer-accountservice-fudzbkh7bvafh9fd.swedencentral-01.azurewebsites.net/api/Account/login" , {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -34,7 +33,6 @@ const LoginPage = () => {
       throw new Error(data.error || "Login failed")
     }
 
-    // Spara token t.ex. i localStorage
     localStorage.setItem("token", data.token)
     return data
   }
@@ -45,7 +43,7 @@ const LoginPage = () => {
 
     try {
       await login(formData.username, formData.email, formData.password)
-      navigate("/events") // vidare till events-sida
+      navigate("/events") 
     } catch (err) {
       setError(err.message)
     }

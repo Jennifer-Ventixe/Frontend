@@ -19,9 +19,8 @@ const Signuppage = () => {
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
-  // ✅ Lägg till register-funktionen
   const register = async (username, email, password) => {
-    const res = await fetch("https://jennifer-accountservice-fudzbkh7bvafh9fd.swedencentral-01.azurewebsites.net/api/Account", {
+    const res = await fetch("https://jennifer-accountservice-fudzbkh7bvafh9fd.swedencentral-01.azurewebsites.net/api/Account/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
