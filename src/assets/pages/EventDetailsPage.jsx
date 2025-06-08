@@ -28,7 +28,7 @@ const EventDetailsPage = () => {
   return (
        <div className="portal-wrapper">
         <Nav />
-        <Header />
+       <Header title="Event details"/>
         <main className="main event-details-page">
             <div className="event-details-wrapper">
                 <div className="event-details">

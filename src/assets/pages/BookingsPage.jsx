@@ -4,7 +4,7 @@ import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import Bookinglist from '../Components/Bookinglist'
 
-const Bookings = () => {
+const BookingsPage = () => {
   return (
     <div className="portal-wrapper">
         <Nav />
@@ -17,4 +17,4 @@ const Bookings = () => {
   )
 }
 
-export default Bookings
+export default BookingsPage

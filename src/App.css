@@ -397,6 +397,24 @@ form {
           grid-template-columns: auto auto auto auto;
           grid-template-rows: auto auto auto;
     }
-
- 
 }   
+
+
+#login, #signup {
+    .form-container {
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    min-width: 300px;
+    max-width: 500px;
+  }
+  .form-input{
+    border-radius: var(--border-radius);
+    border: 1px solid var(--input-border-color);
+  }
+}
